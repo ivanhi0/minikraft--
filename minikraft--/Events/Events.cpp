@@ -63,7 +63,7 @@ int Events::initialize() {
 	_frames = new unit[1024];
 
 	memset(_keys, false, 1032 * sizeof(bool));
-	memset(_frames, 0, 1032 * sizeof(unit));
+	memset(_frames, 0, 1024 * sizeof(unit));
 
 	glfwSetKeyCallback(window, key_callback);
 	glfwSetMouseButtonCallback(window, mouse_button_callback);
