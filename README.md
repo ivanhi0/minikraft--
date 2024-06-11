@@ -1,3 +1,3 @@
 # minikraft--
 
-OpenGL doesn't want to work
+Try to make a minecraft clone but on C++
