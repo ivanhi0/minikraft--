@@ -12,6 +12,7 @@
 #pragma comment(lib, "include/GLFW/glfw3_mt.lib")
 #pragma comment(lib, "OpenGL32.lib")
 
+#include "Graphics/Shader.h"
 #include "Window/Window.h"
 #include "Events/Events.h"
 
@@ -25,6 +26,13 @@ int main()
     //setlocale(LC_ALL, "en");
     Window::initialize(width, height, "Test Windows");
     Events::initialize();
+
+    Shader* shader = loadShader("Graphics/Shaders/main.glslv", "Graphics/Shaders/main.glslf");
+    if (shader == nullptr) {
+        cerr << "Shader not loaded\n";
+		Window::terminate();
+        return 1;
+    }
 
     while (!Window::isShouldClose()) {
         Events::pullEvents();

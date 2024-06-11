@@ -25,6 +25,9 @@ public:
 
 	static bool isPresed(int keycode);
 	static bool justPressed(int keycode);
+
+	static bool isCliked(int button);
+	static bool justCliked(int button);
 };
 
 #endif /* WINDOW_EVENTS_H_ */

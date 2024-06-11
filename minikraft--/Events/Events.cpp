@@ -2,7 +2,6 @@
 
 #include <string>
 // OpenGL Enable
-#define GLEW_STATIC
 #include "../include/GLFW/glfw3.h"
 #pragma comment(lib, "include/GLFW/glfw3.lib")
 #pragma comment(lib, "include/GLFW/glfw3dll.lib")
@@ -81,6 +80,16 @@ bool Events::justPressed(int keycode) {
 	if (keycode < 0 || keycode >= _MOUSE_BUTTONS)
 		return false;
 	return _keys[keycode] && _frames[keycode] == _current;
+}
+
+bool Events::isCliked(int button) {
+	int index = _MOUSE_BUTTONS + button;
+	return _keys[index];
+}
+
+bool Events::justCliked(int button) {
+	int index = _MOUSE_BUTTONS + button;
+	return _keys[index] && _frames;
 }
 
 void Events::pullEvents() {

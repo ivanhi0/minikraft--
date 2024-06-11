@@ -140,14 +140,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Events\Events.cpp" />
+    <ClCompile Include="Graphics\Shader.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="window\window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Events\Events.h" />
+    <ClInclude Include="Graphics\Shader.h" />
     <ClInclude Include="include\GLFW\glfw3.h" />
     <ClInclude Include="include\GL\glew.h" />
     <ClInclude Include="window\window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Graphics\Shaders\main.glslf" />
+    <None Include="Graphics\Shaders\main.glslv" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

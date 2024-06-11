@@ -3,12 +3,9 @@
 #include <iostream>
 
 // OpenGL Enable
-#define GLEW_STATIC
 #include "../include/GL/glew.h"
 #include "../include/GLFW/glfw3.h"
-// GL Libs
 #pragma comment(lib, "include/GL/glew32s.lib")
-// GLFW Libs
 #pragma comment(lib, "include/GLFW/glfw3.lib")
 #pragma comment(lib, "include/GLFW/glfw3dll.lib")
 #pragma comment(lib, "include/GLFW/glfw3_mt.lib")
